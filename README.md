@@ -25,7 +25,7 @@ IDと名前を持っているだけのサンプルテーブル
 ## アプリケーションの動かし方
 アプリケーション実行時は、MySQLに接続している。  
 Docker Desktop をインストールし、下記ファイルをデプロイするとMySQLが立ち上がるようになってる。  
-`data-copy-batch/docker/docker-compose.yml`
+`data-copy-batch/docker/docker-compose.yml`  
 必要なMySQLの接続設定は下記ファイルに記載している。  
 `data-copy-batch/src/test/resources/application.yml`
 
@@ -33,14 +33,14 @@ Docker Desktop をインストールし、下記ファイルをデプロイす�
 - Docker Desktop をインストールする。  
 [Windows に Docker Desktop をインストール](https://docs.docker.jp/docker-for-windows/install.html)  
 [Mac に Docker Desktop をインストール](https://docs.docker.jp/desktop/install/mac-install.html)
-- IntelliJ の プラグイン `Docker` をインストールする。
+- IntelliJ の プラグイン `Docker` をインストールする。  
 [Docker](https://plugins.jetbrains.com/plugin/7724-docker)
 - デプロイ
 `data-copy-batch/docker/docker-compose.yml` を右クリックして  
 `docker:Composeデプロイの実行`を行えばデプロイされる
 
 ### init.sql について
-docker-compose.yml のデプロイ時に下記ファイルに書かれたSQLが実行される。
+docker-compose.yml のデプロイ時に下記ファイルに書かれたSQLが実行される。  
 `data-copy-batch/docker/init_scripts/init.sql`  
 - test_db1 と test_db2 を作成し、test ユーザに権限を付与する
 ```SQL
@@ -106,7 +106,7 @@ spring:
 ```
 ### Configuration
 `application.yml` に記載した情報を取得する`Configuration`クラスを作成する。  
-コピー元のDBの情報を取得する`CopySourceConfiguration`とコピー先の情報を取得する`CopyToConfiguration`を作成する。
+コピー元のDBの情報を取得する`CopySourceConfiguration`とコピー先の情報を取得する`CopyToConfiguration`を作成する。  
 同じクラスのBeanを生成するので、どちらのBeanを生成するか識別できるようにBeanに名前をつける。
 ```Java
 @lombok.Getter
