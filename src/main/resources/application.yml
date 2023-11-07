@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    copy-source:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:63306/test_db1?userCursorFetch=true
+      username: test
+      password: testpass
+      fetchsize: 1000
+    copy-to:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:63306/test_db2?userCursorFetch=true
+      username: test
+      password: testpass
+      fetchsize: 1000
